@@ -20,3 +20,11 @@ val LightGreen3 = Color(0xff11d79b)
 val BlueViolet1 = Color(0xffaeb4fd)
 val BlueViolet2 = Color(0xff9fa5fe)
 val BlueViolet3 = Color(0xff8f98fd)
+
+val Red1 = Color(0xE8FF6825)
+val Red2 = Color(0xF3FC5F1A)
+val Red3 = Color(0xF3F84C00)
+
+val Purple1 = Color(0xC39F35B1)
+val Purple2 = Color(0xCEA31EB9)
+val Purple3 = Color(0xFFA913C2)

@@ -1,6 +1,7 @@
 package com.plcoding.meditationuiyoutube.ui.theme
 
 import androidx.compose.material.Typography
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -37,5 +38,12 @@ val Typography = Typography(
         fontFamily = gothicA1,
         fontWeight = FontWeight.Bold,
         fontSize = 18.sp
+    ),
+    body2 = TextStyle(
+        color = Color.White,
+        fontFamily = gothicA1,
+        fontWeight = FontWeight.Bold,
+        fontSize = 16.sp
     )
+
 )
