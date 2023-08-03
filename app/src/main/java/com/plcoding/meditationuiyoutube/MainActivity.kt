@@ -13,12 +13,12 @@ import com.plcoding.meditationuiyoutube.ui.HomeScreen
 import com.plcoding.meditationuiyoutube.ui.theme.MeditationUIYouTubeTheme
 
 class MainActivity : ComponentActivity() {
-    @ExperimentalFoundationApi
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MeditationUIYouTubeTheme {
-                HomeScreen()
+                Navigation()
             }
         }
     }

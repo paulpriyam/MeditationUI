@@ -24,13 +24,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.plcoding.meditationuiyoutube.BottomMenuContent
 import com.plcoding.meditationuiyoutube.Feature
 import com.plcoding.meditationuiyoutube.R
 import com.plcoding.meditationuiyoutube.ui.theme.*
+import com.plcoding.meditationuiyoutube.util.Screen
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(navController: NavController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -91,13 +93,14 @@ fun HomeScreen() {
         }
         BottomMenu(
             list = listOf(
-                BottomMenuContent("Home", R.drawable.ic_home),
-                BottomMenuContent("Meditate", R.drawable.ic_bubble),
-                BottomMenuContent("Sleep", R.drawable.ic_moon),
-                BottomMenuContent("Music", R.drawable.ic_music),
-                BottomMenuContent("Profile", R.drawable.ic_profile),
+                BottomMenuContent("Home", R.drawable.ic_home, Screen.HomeScreen.route),
+                BottomMenuContent("Meditate", R.drawable.ic_bubble, Screen.MeditateScreen.route),
+                BottomMenuContent("Sleep", R.drawable.ic_moon, Screen.SleepScreen.route),
+                BottomMenuContent("Music", R.drawable.ic_music, Screen.MusicScreen.route),
+                BottomMenuContent("Profile", R.drawable.ic_profile, Screen.ProfileScreen.route),
             ),
-            modifier = Modifier.align(Alignment.BottomCenter)
+            modifier = Modifier.align(Alignment.BottomCenter),
+            navController
         )
     }
 }
@@ -271,6 +274,7 @@ fun FeatureItem(feature: Feature) {
 fun BottomMenu(
     list: List<BottomMenuContent>,
     modifier: Modifier = Modifier,
+    navController: NavController,
     activeHighlightColor: Color = ButtonBlue,
     activeTextColor: Color = Color.White,
     inactiveTextColor: Color = AquaBlue,
@@ -296,6 +300,7 @@ fun BottomMenu(
                 inactiveTextColor
             ) {
                 selectedItemIndex = index
+                navController.navigate(list[index].route+"/PRIYAM")
             }
         }
     }
