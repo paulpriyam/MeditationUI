@@ -91,17 +91,17 @@ fun HomeScreen(navController: NavController) {
                 )
             )
         }
-        BottomMenu(
-            list = listOf(
-                BottomMenuContent("Home", R.drawable.ic_home, Screen.HomeScreen.route),
-                BottomMenuContent("Meditate", R.drawable.ic_bubble, Screen.MeditateScreen.route),
-                BottomMenuContent("Sleep", R.drawable.ic_moon, Screen.SleepScreen.route),
-                BottomMenuContent("Music", R.drawable.ic_music, Screen.MusicScreen.route),
-                BottomMenuContent("Profile", R.drawable.ic_profile, Screen.ProfileScreen.route),
-            ),
-            modifier = Modifier.align(Alignment.BottomCenter),
-            navController
-        )
+//        BottomMenu(
+//            list = listOf(
+//                BottomMenuContent("Home", R.drawable.ic_home, Screen.HomeScreen.route),
+//                BottomMenuContent("Meditate", R.drawable.ic_bubble, Screen.MeditateScreen.route),
+//                BottomMenuContent("Sleep", R.drawable.ic_moon, Screen.SleepScreen.route),
+//                BottomMenuContent("Music", R.drawable.ic_music, Screen.MusicScreen.route),
+//                BottomMenuContent("Profile", R.drawable.ic_profile, Screen.ProfileScreen.route),
+//            ),
+//            modifier = Modifier.align(Alignment.BottomCenter),
+//            navController
+//        )
     }
 }
 
